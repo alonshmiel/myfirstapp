@@ -1,0 +1,13 @@
+<center>Task of <%= @name %></center>
+<table border = "1">
+  <tr>
+     <td> TASK </td>
+     <td> DONE </td>
+ </tr>
+  <% @worker_tasks.each do |task| %>
+  <tr>
+    <td><%= task.task %></td>
+    <td><%= task.done %></td>
+  </tr>
+  <% end %>
+</table>

@@ -1,0 +1,20 @@
+<h1>Listing workers</h1>
+<table size = "1">
+	<tr>
+		<td>NAME</td>
+		<td>Num Of Tasks</td>
+		<td>Tasks Left</td>
+	</tr>
+	<% @workers.group_by(&:name).each do |name, tasks| %>
+  	<tr>
+	    <td><%= name %></td>
+	    <td><%= tasks.size %></td>
+	    <td><%= tasks.select{ |task| task.done != 'yes' }.size %></td>
+
+	    <td><%= link_to 'Show Tasks', worker_tasks_path(name) %></td>
+
+	</tr>
+	<% end %>
+</table>
+<br />
+
