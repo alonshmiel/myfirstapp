@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 TODO::Application.routes.draw do
   #resources :workers
   #root to:"workers#index"
@@ -10,6 +11,12 @@ TODO::Application.routes.draw do
 end
 
 
+=======
+Demoapp::Application.routes.draw do
+  resources :tasks
+  
+  root to:"tasks#index"
+>>>>>>> a72203f6334ec91d16b19f5388c76b63195e8698
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

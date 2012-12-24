@@ -6,6 +6,10 @@ gem 'rails', '3.2.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+<<<<<<< HEAD
+=======
+gem 'therubyracer'
+>>>>>>> a72203f6334ec91d16b19f5388c76b63195e8698
 
 
 # Gems used only for assets and not required
