@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: MyString
+  full_name: MyText
+  is_worker: false
+
+two:
+  email: MyString
+  full_name: MyText
+  is_worker: false

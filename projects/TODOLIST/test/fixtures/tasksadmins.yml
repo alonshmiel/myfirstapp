@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  admin_mail: MyString
+  worker_mail: MyString
+  task: MyText
+  done: false
+
+two:
+  admin_mail: MyString
+  worker_mail: MyString
+  task: MyText
+  done: false

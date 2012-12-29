@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Admin mail:</b>
+  <%= @tasksadmin.admin_mail %>
+</p>
+
+<p>
+  <b>Worker mail:</b>
+  <%= @tasksadmin.worker_mail %>
+</p>
+
+<p>
+  <b>Task:</b>
+  <%= @tasksadmin.task %>
+</p>
+
+<p>
+  <b>Done:</b>
+  <%= @tasksadmin.done %>
+</p>
+
+
+<%= link_to 'Edit', edit_tasksadmin_path(@tasksadmin) %> |
+<%= link_to 'Back', tasksadmins_path %>

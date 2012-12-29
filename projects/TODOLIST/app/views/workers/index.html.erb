@@ -1,0 +1,26 @@
+<h1>Listing workers</h1>
+
+<table>
+  <tr>
+    <th>Admin_mail</th>
+    <th>Task</th>
+    <th>Done</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+
+
+<% @tasks_worker.each do |task| %>
+  <tr>
+    <td><%= task.admin_mail %></td>
+    <td><%= task.task %></td>
+    <td><%= task.done %></td>
+    <td><%= link_to 'Edit', edit_worker_path(task) %></td>
+    <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

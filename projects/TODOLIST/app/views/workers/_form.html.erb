@@ -1,0 +1,29 @@
+<%= form_for(@tasksadmin) do |f| %>
+  <% if @tasksadmin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tasksadmin.errors.count, "error") %> prohibited this tasksadmin from being saved:</h2>
+
+      <ul>
+      <% @tasksadmin.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :admin_mail, :value => @tasksadmin.admin_mail %>
+  
+  <%= f.hidden_field :worker_mail, :value => @worker_mail %>
+  
+  <%= f.hidden_field :task, :value => @tasksadmin.task %>
+   
+  
+<div class="field">
+  <%= f.label :done %><br />
+  <%= f.check_box :done %>
+</div>
+
+  <div class="actions">
+    <%= f.submit("update the task") %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<h1>Listing tasksadmins</h1>
+
+<table>
+  <tr>
+    <th>Admin mail</th>
+    <th>Worker mail</th>
+    <th>Task</th>
+    <th>Done</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+
+
+<% @tasksadmins.each do |tasksadmin| %>
+  <tr>
+    <td><%= tasksadmin.admin_mail %></td>
+    <td><%= tasksadmin.worker_mail %></td>
+    <td><%= tasksadmin.task %></td>
+    <td><%= tasksadmin.done %></td>
+    <td><%= link_to 'Show', tasksadmin %></td>
+    <td><%= link_to 'Edit', edit_tasksadmin_path(tasksadmin) %></td>
+    <td><%= link_to 'Destroy', tasksadmin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tasksadmin', new_tasksadmin_path %>

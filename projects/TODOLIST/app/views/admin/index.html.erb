@@ -1,0 +1,15 @@
+<h1>Listing workers</h1>
+
+
+<select>
+<% @workers.group_by(&:email).each do |email, tasks| %>
+
+<option value="<%= email %>"><%= email %></option>
+
+<% end %>
+</select>
+
+
+<br />
+
+

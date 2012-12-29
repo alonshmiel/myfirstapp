@@ -1,0 +1,31 @@
+<%= form_for(@tasksadmin) do |f| %>
+  <% if @tasksadmin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tasksadmin.errors.count, "error") %> prohibited this tasksadmin from being saved:</h2>
+
+      <ul>
+      <% @tasksadmin.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :admin_mail, :value => @admin_mail %>
+  
+  
+  <div class="field">
+   
+   <%= f.select :worker_mail, @workers.map{ |c| [c.email, c.email] } %>
+   
+  </div>
+  <div class="field">
+    <%= f.label :task %><br />
+    <%= f.text_area :task %>
+  </div>
+
+  <%= f.hidden_field :done, :value => false %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
